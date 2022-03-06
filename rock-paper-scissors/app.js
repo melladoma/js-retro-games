@@ -51,27 +51,38 @@ function generateComputerChoice() {
 function getResult() {
     if (computerChoice === userChoice) {
         result = "it's a draw!"
-        resultDisplay.style.color = "grey";
+        resultDisplay.style.border = "1px solid rgb(128,128,128)";
+        resultDisplay.style.backgroundColor = "rgba(128, 128, 128,0.5)";
+        resultDisplay.style.color = "white";
+        resultDisplay.style.borderRadius = "4px";
+
     }
     if ((computerChoice === 'rock' && userChoice === 'paper') || (computerChoice === 'paper' && userChoice === 'scissors') || (computerChoice === 'scissors' && userChoice === 'rock') || (computerChoice === 'paper' && userChoice === 'scissors')) {
-        result = "you win!"
-        resultDisplay.style.color = "#00CED1";
+        result = "You win!"
+        // resultDisplay.style.color = "#00CED1";
+        resultDisplay.style.border = "1px solid #00CED1";
+        resultDisplay.style.backgroundColor = "rgba(0, 206, 209,0.5)";
+        resultDisplay.style.color = "white";
+        resultDisplay.style.borderRadius = "4px";
         wintransform(userChoiceIcon, computerChoiceIcon);
 
     }
     if ((computerChoice === 'paper' && userChoice === 'rock') || (computerChoice === 'scissors' && userChoice === 'paper') || (computerChoice === 'rock' && userChoice === 'scissors') || (computerChoice === 'paper' && userChoice === 'rock')) {
-        result = "you lose!"
-        resultDisplay.style.color = "orange";
+        result = "You lose!"
+        resultDisplay.style.border = "1px solid rgb(255,165,0)";
+        resultDisplay.style.backgroundColor = "rgba(255, 165, 0,0.5)";
+        resultDisplay.style.color = "white";
+        resultDisplay.style.borderRadius = "4px";
         wintransform(computerChoiceIcon, userChoiceIcon);
     }
     resultDisplay.innerHTML = result
 }
 
 function counter() {
-    if (result == "you lose!") {
+    if (result == "You lose!") {
         computerWins += 1
     }
-    if (result == "you win!") {
+    if (result == "You win!") {
         userWins += 1
     }
     computerWinsDisplay.innerHTML = computerWins
@@ -182,4 +193,6 @@ function initDisplay() {
     computerChoiceDisplay.innerHTML = ""
     userChoiceDisplay.innerHTML = ""
     resultDisplay.innerHTML = ""
+    resultDisplay.style.backgroundColor = "white"
+    resultDisplay.style.border = "none"
 }
