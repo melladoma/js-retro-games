@@ -31,4 +31,6 @@ Game starts by flipping over one card
 
 ### Added functions
 
-Coming soon
+- fixed bug on clicking the same card
+- replaced the alert pop-up by a timer message
+- CSS formatting

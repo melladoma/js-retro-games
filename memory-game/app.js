@@ -53,6 +53,7 @@ cardArray.sort(() => 0.5 - Math.random()); //sorting the array randomly
 
 const gridDisplay = document.querySelector('#grid')
 const resultDisplay = document.querySelector('#result')
+const messageDisplay = document.querySelector('#message')
 let cardsChosen = []
 let cardsChosenIds = []
 const cardsWon = []
@@ -73,15 +74,18 @@ function checkMatch() {
     const cards = document.querySelectorAll('#grid img')
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
+    console.log(cardsChosenIds[0], cardsChosenIds[1])
+    console.log(optionOneId, optionTwoId)
 
-    if (optionOneId == optionTwoId) {
-        alert('you clicked the same card!')
+    if (optionOneId === optionTwoId) {
+        messageDisplay.textContent = ('You clicked the same card!')
+        setTimeout(() => messageDisplay.textContent = '', 1000)
         cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
-    }
 
-    if (cardsChosen[0] == cardsChosen[1]) {
-        alert('You found a match!')
+    } else if (cardsChosen[0] == cardsChosen[1]) {
+        messageDisplay.textContent = ('You found a match!')
+        setTimeout(() => messageDisplay.textContent = '', 1000)
         cards[optionOneId].setAttribute('src', 'images/white.png')
         cards[optionTwoId].setAttribute('src', 'images/white.png')
         cards[optionOneId].removeEventListener('click', flipCard) //remove the ability to clik on matched card
@@ -90,11 +94,13 @@ function checkMatch() {
     } else {
         cards[optionOneId].setAttribute('src', 'images/blank.png')
         cards[optionTwoId].setAttribute('src', 'images/blank.png')
-        alert('Sorry, try again!')
+        messageDisplay.textContent = ('Sorry, try again!')
+        setTimeout(() => messageDisplay.textContent = '', 1000)
     }
     resultDisplay.textContent = cardsWon.length
     cardsChosen = []
     cardsChosenIds = []
+
 
     if (cardsWon.length == (cardArray.length / 2)) {
         resultDisplay.textContent = "Congratulations, you found them all!"
@@ -102,12 +108,9 @@ function checkMatch() {
 }
 
 function flipCard() {
-    console.log(cardArray)
     const cardId = this.getAttribute('data-id') //why does it know on click? because call back???
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
-    console.log(cardsChosen)
-    console.log(cardsChosenIds)
     this.setAttribute('src', cardArray[cardId].img)
     if (cardsChosen.length === 2) {
         setTimeout(checkMatch, 500)

@@ -1,6 +1,80 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: antiquewhite;
+}
+
 #grid {
-  width: 400px;
-  height: 300px;
+  align-self: center;
+  width: 440px;
+  height: 330px;
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.score {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.msg-line {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-box {
+  padding: 10px 60px;
+  font-size: 15px;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 650px;
+  background-color: white;
+  box-shadow: 10px 10px black;
+}
+
+.window-navbar {
+  display: flex;
+  border-bottom: 2px solid black;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.mock-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.window-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 35px;
+  gap: 20px;
 }
