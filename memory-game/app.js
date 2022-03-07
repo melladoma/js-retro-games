@@ -54,6 +54,7 @@ cardArray.sort(() => 0.5 - Math.random()); //sorting the array randomly
 const gridDisplay = document.querySelector('#grid')
 const resultDisplay = document.querySelector('#result')
 const messageDisplay = document.querySelector('#message')
+const resetButton = document.querySelector('#reset-btn')
 let cardsChosen = []
 let cardsChosenIds = []
 const cardsWon = []
@@ -67,6 +68,7 @@ function createBoard() {
         gridDisplay.appendChild(card)
     }
 }
+
 
 createBoard()
 
@@ -117,3 +119,14 @@ function flipCard() {
     }
 
 }
+
+resetButton.addEventListener('click', () => {
+    let element = gridDisplay
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+
+    cardArray.sort(() => 0.5 - Math.random());
+    console.log(gridDisplay)
+    createBoard();
+})
