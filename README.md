@@ -1,6 +1,6 @@
 # js-retro-games
 
-Tutorial by Ania Kubow, walkthrough [here] (https://www.youtube.com/watch?v=ec8vSKJuZTk)
+Tutorial by Ania Kubow, walkthrough [here](https://www.youtube.com/watch?v=ec8vSKJuZTk)
 
 ## Rock-paper-scissors
 
