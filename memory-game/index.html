@@ -9,15 +9,31 @@
 </head>
 
 <body>
+    <div class="folder-left">
     <div id="whack-a-mole" class="folder">
+        <a href="../whack-a-mole.index.html">
         <img class="folder-img" src="./images/folder.png">
-        <p>Whack-a-mole</p>
+        <p>Whack-a-mole</p></a>
     </div>
-    
+
+    <div id="breakout" class="folder">
+        <a href="../breakout.index.html">
+        <img class="folder-img" src="./images/folder.png">
+        <p>Breakout</p></a>
+    </div>
+
+    <div id="frogger" class="folder">
+        <a href="../frogger.index.html">
+        <img class="folder-img" src="./images/folder.png">
+        <p>Frogger</p></a>
+    </div>
+</div>
+    <div class="main">
     <div class="window">
         <div class="window-navbar">
             <h2> Memory Game</h2>
             <div class="mock-buttons">
+            <a href="../index.html"><img src="./images/homepage.png" class="home-icon"></a>
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
@@ -25,24 +41,39 @@
         </div>
         <div class="window-content">
     
-    
-    <div id="grid"></div>
+        <div id="grid"></div>
 
-    <div class="message-box">
+        <div class="message-box">
 
         <div class="msg-line"><p id="message"></p></div>
         <div class="result-line">
-     <h3 class="score">Score : <span id="result"></span></h3>
-     <button id="reset-btn">Reset game</button>
+        <h3 class="score">Score : <span id="result"></span></h3>
+        <button id="reset-btn">Reset game</button>
+        </div>
+        </div>
+        </div>
     </div>
-    </div>
-    </div>
+</div>
+
+    <div class="folder-right">
+    <div id="rock-paper-scissors" class="folder">
+        <a href="../rock-paper-scissors/index.html">
+        <img class="folder-img" src="./images/folder.png">
+        <p>Rock-Paper-Scissors</p></a>
     </div>
 
-    <div id="rock-paper-scissors" class="folder">
+    <div id="connect-four" class="folder">
+        <a href="../connect-four.index.html">
         <img class="folder-img" src="./images/folder.png">
-        <p>Rock-Paper-Scissors</p>
+        <p>Connect Four</p></a>
     </div>
+
+    <div id="space-invaders" class="folder">
+        <a href="../space-invaders.index.html">
+        <img class="folder-img" src="./images/folder.png">
+        <p>Space Invaders</p></a>
+    </div>
+</div>
     
     <script src="app.js"></script>
 </body>

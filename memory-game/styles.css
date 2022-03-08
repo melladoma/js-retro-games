@@ -2,11 +2,10 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-
   background-color: rgb(250 215 215);
+  margin: 0;
+  justify-content: center;
 }
 
 #grid {
@@ -68,7 +67,9 @@ body {
   border-radius: 10px;
   border: 2px solid black;
 }
-
+.home-icon {
+  height: 20px;
+}
 h2 {
   margin: 0;
   padding: 0;
@@ -117,8 +118,60 @@ button:hover {
   padding: 0;
   font-size: 10px;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.folder-left {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    " . . . . . "
+    " . . . . ."
+    ". . . position3 position1"
+    ". . . . position2 "
+    ". . . . ."
+    ". . . . .";
+}
+
+.folder-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    " . . . . ."
+    " . . . . ."
+    ". position4 .  . ."
+    "position5 . . . ."
+    ". position6  . . ."
+    ". . . . ."
+    ". . . . .";
+}
+
+#whack-a-mole {
+  grid-area: position1;
+}
+#frogger {
+  grid-area: position2;
+}
+#breakout {
+  grid-area: position3;
+  align-self: end;
+}
 #rock-paper-scissors {
-  /* background-image: url("./images/folder.png");
-  background-size: contain;
-  background-repeat: no-repeat; */
+  grid-area: position4;
+  align-self: end;
+}
+#connect-four {
+  grid-area: position5;
+  justify-self: right;
+}
+#space-invaders {
+  grid-area: position6;
 }
