@@ -33,7 +33,7 @@ a:hover {
 }
 /*SCREEN DISPLAY*/
 
-span {
+#display-text {
   color: rgba(81, 84, 119, 0.932);
   font-family: "Press Start 2P", cursive, monospace;
   font-size: 9px;

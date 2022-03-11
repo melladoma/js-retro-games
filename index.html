@@ -11,14 +11,13 @@
 </head>
 <body>
     <h1>7 Retro games in Vanilla Javascript</h1>
-    <a href="./rock-paper-scissors/index.html">Rock-Paper-scissors</a>
-    <a href="./memory-game/index.html">Memory Game</a>
 
     <div class="illustration">
         <div id="top-part" class="console">
             <div id="top-shadow">
                 <div id="screen">
-                    <span id="display">HELLO PLAYER, <br> CHOOSE YOUR GAME!</span>
+                    <a id="display-text">HELLO PLAYER, <br> CHOOSE YOUR GAME!</a>
+                    <img>
                 </div>
             </div>
     
@@ -29,12 +28,15 @@
         </div>
         <div id="bottom-part" class="console">
             <div id="middle-shadow"></div>
-            <div id="btm-light"></div>
+            <div id="btm-light">
+                <button id="go-left">&#8249</button>
+                <button id="go-right">&#8250</button>
+            </div>
             <div id="contour" class="console"></div>
         </div>
         <div id="shadow"></div>
     </div>
     
-    
+    <script src="./app.js"></script>
 </body>
 </html>
