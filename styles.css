@@ -23,3 +23,134 @@ h1 {
 a:hover {
   transform: translate(2px, 2px);
 }
+
+/*CONSOLE ILLUSTRATION RULES*/
+:root {
+  --bdr-color: rgba(81, 84, 119, 0.932);
+  --bgd-color: lightcoral;
+  --bgd-color-light: rgb(240, 198, 198);
+  --bgd-color-shadow: rgb(240, 100, 100);
+}
+/*SCREEN DISPLAY*/
+
+span {
+  color: rgba(81, 84, 119, 0.932);
+  font-family: "Press Start 2P", cursive, monospace;
+  font-size: 9px;
+}
+
+.illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.console {
+  border: var(--bdr-color, grey) solid 4px;
+}
+
+#top-part {
+  background-color: var(--bgd-color-light);
+  height: 250px;
+  width: 300px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#top-shadow {
+  background-color: var(--bgd-color);
+  height: 95%;
+  width: 100%;
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#top-shadow,
+#top-part {
+  border-radius: 20px 20px 0 0;
+}
+
+#screen {
+  height: 70%;
+  width: 70%;
+  background-color: hsl(84deg 65% 62% / 73%);
+  border: 4px solid var(--bdr-color, grey);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#middle-part {
+  height: 50px;
+  width: 310px; /* 10px de plus*/
+  border-radius: 15px;
+  margin-top: -10px;
+  z-index: 10;
+  background-color: var(--bgd-color-shadow);
+  border: 4px solid var(--bdr-color, grey);
+}
+
+#middle-light {
+  height: 20px;
+  width: 310px; /* 10px de plus*/
+  border-radius: 10px;
+  background-color: var(--bgd-color-light);
+}
+
+#middle-casual {
+  background-color: var(--bgd-color);
+  height: 50%;
+  margin-top: -10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#middle-border {
+  border: 4px solid var(--bdr-color, grey);
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+}
+#middle-shadow {
+  background-color: var(--bgd-color-shadow);
+  height: 30px;
+  width: 100%;
+  margin-top: -10px;
+  border-radius: 5px;
+  z-index: 9;
+}
+
+#bottom-part {
+  height: 150px;
+  width: 300px;
+  border-radius: 0 0 20px 20px;
+  margin-top: -5px;
+  z-index: 5;
+  background-color: var(--bgd-color-shadow);
+}
+#btm-light {
+  height: 70%;
+  width: 100%;
+  background-color: var(--bgd-color);
+  border-radius: 0 0 20px 20px;
+}
+
+#contour {
+  height: 10px;
+  border-bottom: solid 4px var(--bdr-color, grey);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0 0 20px 20px;
+  z-index: 5;
+}
+
+#shadow {
+  height: 30px;
+  width: 300px;
+  background-color: var(--bdr-color, grey);
+  border-radius: 0 0 20px 20px;
+  margin-top: -20px;
+  border: 3px solid var(--bdr-color, grey);
+}
