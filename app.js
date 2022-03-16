@@ -73,4 +73,10 @@ buttonRight.addEventListener("click", () => {
     displayGame(gameId);
 })
 
-//quid disable buttons when gameId=length?
+let buttonStart = document.getElementById('start');
+
+buttonStart.addEventListener("click", () => {
+    let linkBtn = document.getElementById('link');
+    linkBtn.setAttribute('href', gameList[gameId]["link"]);
+}
+)
