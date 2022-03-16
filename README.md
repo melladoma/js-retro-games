@@ -30,3 +30,7 @@ Game starts by flipping over one card
 - Replaced the alert pop-up by a timed message
 - CSS formatting to integrate bumping animation
 - Added reset button function : delete existing deck (via removing nodes) and re-generate a complete random deck
+
+## Whac-a-mole
+
+Description coming soon
