@@ -6,8 +6,9 @@ const score = document.querySelector('#score')
 
 let result = 0;
 let hitPosition
-let currentTime = 60;
+let currentTime = 30;
 let timerId = null;
+
 
 function randomSquare() {
     //removes the mole from each square
@@ -37,10 +38,12 @@ function moveMole() {
     //calls randomsquare (mole apparition) at a timed interval
     timerId = setInterval(randomSquare, 1000);
 }
+
 moveMole();
 
 function countDown() {
-    currentTime--
+    currentTime--;
+
     timeLeft.textContent = currentTime
 
     if (currentTime == 0) {
@@ -48,6 +51,9 @@ function countDown() {
         clearInterval(timerId) //stops moveMole interval calling
         alert(`GAME OVER! Your final score is ${result}`)
     }
+
 }
 
-let countDownTimerId = setInterval(countDown, 500);
+let countDownTimerId = setInterval(countDown, 1000);
+
+
