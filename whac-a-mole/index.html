@@ -6,23 +6,32 @@
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
-        <h2>Your score: </h2>
-        <h2 id="score">0</h2>
+        <header>
+            <img src="https://img.icons8.com/dusk/64/000000/auction.png" alt="hammer">
+            <!--icon by Icons8 https://icons8.com/icons/set/hammer -->
+            <div>
+            <h2>Whac some mole!</h2>
+            <p>Your score: <span id="score">0</span> </p> 
+            <p>Time left: <span id="time-left">30</span> </p> 
+             </div>
+            
+        </header>
 
-        <h2>Time left: </h2>
-        <h2 id="time-left">60</h2>
+        <main>
+            <div class="grid">
+                <div class="square" id="1"></div>
+                <div class="square" id="2"></div>
+                <div class="square" id="3"></div>
+                <div class="square" id="4"></div>
+                <div class="square" id="5"></div>
+                <div class="square" id="6"></div>
+                <div class="square" id="7"></div>
+                <div class="square" id="8"></div>
+                <div class="square" id="9"></div>
+            </div>
 
-        <div class="grid">
-            <div class="square" id="1"></div>
-            <div class="square" id="2"></div>
-            <div class="square" id="3"></div>
-            <div class="square" id="4"></div>
-            <div class="square" id="5"></div>
-            <div class="square" id="6"></div>
-            <div class="square" id="7"></div>
-            <div class="square" id="8"></div>
-            <div class="square" id="9"></div>
-        </div>
+        </main>
+       
 
         <script src="app.js"></script>
     </body>

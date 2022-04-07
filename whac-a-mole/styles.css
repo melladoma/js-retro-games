@@ -1,17 +1,46 @@
+body{
+  height:100vh;
+  margin:0;
+  padding-top:8px;
+  padding-left: min(30px,20%);
+  font-family:Arial, Helvetica, sans-serif;
+  color: #583f65;
+  
+}
+header{
+  height:min(19vh,110px);
+  display:flex;
+}
+header h2, header img, header p{
+  margin:10px 5px;
+}
+
+
+header img{
+  height:30px;
+}
+main{
+  height:70vmin;
+  width:70vmin;
+}
 .grid {
-  width: 606px; /* 3squares *200px*/
-  height: 606px; /* 3squares *200px*/
+  width: min(100%,600px); /* 3squares *200px*/
+  height: min(100%,600px); /* 3squares *200px*/
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
+  margin:0 auto;
 }
 
 .square {
-  height: 200px;
-  width: 200px;
-  border: solid black 1px;
+  height: calc(100% / 3 - 14px);
+  width: calc(100% / 3 - 14px);
+  border: solid #b38f94 2px;
+  border-radius:2px;
 }
 
 .mole {
-  background-image: url("mole.jpg");
-  background-size: cover;
+  background-image: url("https://img.icons8.com/dusk/256/000000/year-of-rat.png");
+  /*icon by Icons8 https://icons8.com/icon/GsWJiahRp-db/rat */
+  background-size:contain;
 }
